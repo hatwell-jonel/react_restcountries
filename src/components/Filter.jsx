@@ -1,8 +1,34 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 function Filter() {
+
+  const [selectedRegion, setSelectedRegion] = useState("");
+  
+  const regions = {
+    "all": "All",
+    "africa": "Africa",
+    "america": "America",
+    "asia": "Asia",
+    "europe": "Europe",
+    "oceania": "Oceania",
+  };
+
+  const handleChange = (e) => {
+    setSelectedRegion(e.target.value);
+  };
+
+
   return (
-    <div>Filter</div>
+    <select className="filter_region" value={selectedRegion} onChange={handleChange}>
+        <option value="" hidden selected>Filter by Region</option>
+      {
+        Object.entries(regions).map(([key, value]) => (
+          <option key={key} value={key}>
+            {value}
+          </option>
+        ))
+      }
+    </select>
   )
 }
 
