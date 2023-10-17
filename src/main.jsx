@@ -6,8 +6,5 @@ import './index.css'
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <App />
-  </React.StrictMode>,
+  </React.StrictMode>
 )
-
-
-// https://restcountries.com/v3.1/all

@@ -7,7 +7,7 @@ function Filter() {
   const regions = {
     "all": "All",
     "africa": "Africa",
-    "america": "America",
+    "americas": "Americas",
     "asia": "Asia",
     "europe": "Europe",
     "oceania": "Oceania",

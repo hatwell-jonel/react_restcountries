@@ -62,7 +62,10 @@ Your users should be able to:
 
 #### Useful resources
 - [Difference of Axios and Fetch](https://blog.logrocket.com/axios-vs-fetch-best-http-requests/) - This helped me to choose which is the best for making HTTP request.
-https://getcssscan.com/css-box-shadow-examples
+
+- [REST COUNTRIES API](https://restcountries.com/v3.1/all) - helped me to get all the details of each country.
+
+- [Box shadow list](https://getcssscan.com/css-box-shadow-examples) - helped me for faster development of box shadow.
 
 #### Author
 

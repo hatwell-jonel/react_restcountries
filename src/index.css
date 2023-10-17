@@ -150,7 +150,6 @@ a{
 /* COUNTRIES */
 .countries{
   padding: 1rem var(--content_center);
-  border: 1px solid red;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(16.2rem, 1fr));
   grid-gap: 1rem;
@@ -207,7 +206,6 @@ a{
 /* TABLETS */
 @media (min-width: 768px) and (max-width: 1023px) {
   .filter{
-    border: 1px solid red;
     margin: 50px 0px;
     padding: 1rem var(--content_center);
     display: flex;
