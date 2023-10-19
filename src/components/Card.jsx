@@ -1,11 +1,12 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import { formatNumber } from "../helpers.js";
 
 
 const Card = React.memo(({  index, country }) => {
     return (
-      <>
-        <div className='card' key={index}>
+      <Link to={`/${country.name.common}`} key={index}>
+        <div className='card'>
           <img src={country.flags.png} className='card_image' alt="flag" />
           <div className="card__details">
             <h2 className="card_name">{country.name.common ?? country.name.official}</h2>
@@ -22,7 +23,7 @@ const Card = React.memo(({  index, country }) => {
             </div>
           </div>
         </div>
-      </>
+      </Link>
     );
 });
 

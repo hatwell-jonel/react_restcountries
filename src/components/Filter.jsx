@@ -20,7 +20,7 @@ function Filter() {
 
   return (
     <select className="filter_region" value={selectedRegion} onChange={handleChange}>
-        <option value="" hidden selected>Filter by Region</option>
+        <option value="" hidden>Filter by Region</option>
       {
         Object.entries(regions).map(([key, value]) => (
           <option key={key} value={key}>
