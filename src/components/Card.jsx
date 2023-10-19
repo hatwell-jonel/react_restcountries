@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 import { formatNumber } from "../helpers.js";
 
 
-const Card = React.memo(({  index, country }) => {
+const Card = ({ country }) => {
     return (
-      <Link to={`/${country.name.common}`} key={index}>
+      <Link to={`/${country.name.common}`}>
         <div className='card'>
           <img src={country.flags.png} className='card_image' alt="flag" />
           <div className="card__details">
@@ -25,6 +25,6 @@ const Card = React.memo(({  index, country }) => {
         </div>
       </Link>
     );
-});
+};
 
 export default Card;

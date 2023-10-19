@@ -38,7 +38,7 @@ function Countries() {
       </div>
       <section className="countries">
         {
-          countries.map((country, index) => <Card  index={index} country={country} />)
+            countries.map((country, index) => <Card key={index} country={country} />)
         }
       </section>
     </>
