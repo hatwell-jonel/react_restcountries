@@ -3,11 +3,10 @@ import Header from '../components/Header'
 import Search from '../components/Search'
 import Filter from '../components/Filter'
 import Card from '../components/Card'
-import {BiSearchAlt2} from "react-icons/bi"
 
 function Countries() {
+    const RESTCOUNTRIES_V3_API = "https://restcountries.com/v3.1";
     const [countries, setCountries] = useState([]);
-    const [api, setApi] = useState('https://restcountries.com/v3.1');
     const [endpoint, setEndpoint] = useState("all");
     const [search, setSearch] = useState("");
     const [selectedRegion, setSelectedRegion] = useState("");
@@ -30,7 +29,7 @@ function Countries() {
             }
 
 
-            const response = await fetch(`${api}/${endpointToUse}`);
+            const response = await fetch(`${RESTCOUNTRIES_V3_API}/${endpointToUse}`);
             if (!response.ok) {
                 throw new Error('Network response was not ok');
             }
@@ -49,19 +48,20 @@ function Countries() {
       fetchCountries();
     }, [search, selectedRegion])
 
-
   return (
      <>
       <Header />
+
       <div className='filter'>
         <Search setSearch={setSearch} />
         <Filter selectedRegion={selectedRegion} setSelectedRegion={setSelectedRegion}/>
       </div>
-      <section className="countries">
+
+      <main className="countries">
         {
             countries.map((country, index) => <Card key={index} country={country} />)
         }
-      </section>
+      </main>
     </>
   )
 }
