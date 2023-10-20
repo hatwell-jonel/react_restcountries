@@ -1,11 +1,9 @@
 import React, { useState } from 'react'
 
-function Filter() {
+function Filter({selectedRegion, setSelectedRegion}) {
 
-  const [selectedRegion, setSelectedRegion] = useState("");
-  
   const regions = {
-    "all": "All",
+    "": "All",
     "africa": "Africa",
     "americas": "Americas",
     "asia": "Asia",
@@ -13,13 +11,8 @@ function Filter() {
     "oceania": "Oceania",
   };
 
-  const handleChange = (e) => {
-    setSelectedRegion(e.target.value);
-  };
-
-
   return (
-    <select className="filter_region" value={selectedRegion} onChange={handleChange}>
+    <select className="filter_region" value={selectedRegion} onChange={(e) => setSelectedRegion(e.target.value)}>
         <option value="" hidden>Filter by Region</option>
       {
         Object.entries(regions).map(([key, value]) => (

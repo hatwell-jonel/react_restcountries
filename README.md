@@ -67,14 +67,13 @@ Your users should be able to:
 
 - [Box shadow list](https://getcssscan.com/css-box-shadow-examples) - helped me for faster development of box shadow.
 
-#### Author
+#### Api endpoints used
+ - https://restcountries.com/v3.1/all
+ - https://restcountries.com/v3.1/name/{name}
+ - https://restcountries.com/v3.1/region/{region}
 
-- Frontend Mentor - [@JonelHatwell](https://www.frontendmentor.io/profile/hatwell-jonel)
-- LinkedIn - [@JonelHatwell](https://www.linkedin.com/in/jonel-hatwell/)
-
-
-#### media queries guide
-
+ #### media queries guide
+```css
 /* 
   ##Device = Desktops
   ##Screen = 1281px to higher resolution desktops
@@ -140,3 +139,10 @@ Your users should be able to:
   /* CSS */
   
 }
+
+#### Author
+
+- Frontend Mentor - [@JonelHatwell](https://www.frontendmentor.io/profile/hatwell-jonel)
+- LinkedIn - [@JonelHatwell](https://www.linkedin.com/in/jonel-hatwell/)
+
+
